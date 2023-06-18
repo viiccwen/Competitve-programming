@@ -1,20 +1,20 @@
 #include <bits/stdc++.h>
+#define ll long long
 using namespace std;
 
-int cal(int x, int y) {
-  int n = x + y;
+ll cal(ll x, ll y) {
+  ll n = x + y;
   return n * (n + 1) / 2 + x;
 }
 
 void solve() {
-  int n, dis1, dis2;
+  ll n, dis;
   cin >> n;
 
   for (int i = 1, a, b, c, d; i <= n; i++) {
     cin >> a >> b >> c >> d;
-    dis1 = cal(a, b);
-    dis2 = cal(c, d);
-    cout << "Case " << i << ": " << dis2 - dis1 << '\n';
+    dis = cal(c, d) - cal(a, b);
+    cout << "Case " << i << ": " << dis << '\n';
   }
 }
 
