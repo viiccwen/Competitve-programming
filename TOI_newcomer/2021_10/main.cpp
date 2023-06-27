@@ -1,44 +1,29 @@
 #include <bits/stdc++.h>
+#define ll long long
 using namespace std;
 
+// p2
+
+vector<char> alpha;
+
 void solve() {
-  int N;
+  for (int i = 0; i < 26; i++) alpha.push_back(i + 97);
+
   string s;
-  vector<int> ans;
-  cin >> N >> s;
-
-  for (int i = 0; i < s.size(); i += N) {
-    int sum = 0;
-    for (int j = i; j < i + N; j++) {
-      if (j < s.size()) sum += s[j] - '0';
-    }
-    ans.push_back(sum);
-    cout << sum << '\n';
-  }
-
-  sort(ans.begin(), ans.end());
-  bool flag = 0;
-
-  for (int i = 0; i < ans.size(); i++) {
-    int target = ans[i];
-
-    for (int j = i + 1; j < ans.size(); j++) {
-      if (ans[j] == target) {
-        flag = 1;
-        break;
-      } else {
-        i = j;
-        break;
+  ll t;
+  getline(cin, s);
+  cin >> t;
+  for (ll i = 0; i < s.size(); i++) {
+    if (isalpha(s[i])) {
+      ll tmp = s[i] + t - 97;
+      if (tmp < 0) {
+        tmp %= 26;
+        tmp = 26 + tmp;
       }
-    }
-
-    if (flag) break;
+      cout << alpha[tmp];
+    } else
+      cout << s[i];
   }
-
-  if (flag)
-    cout << "Yes";
-  else
-    cout << "No";
 }
 
 int main() {

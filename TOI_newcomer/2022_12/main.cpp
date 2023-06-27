@@ -1,39 +1,25 @@
 #include <bits/stdc++.h>
-
+#define ll long long
 #include <unordered_set>
-
 using namespace std;
 
+unordered_set<char> Set = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
+
 void solve() {
-  string s, tmp;
-  int N;
-  unordered_set<string> set;
-  cin >> s;
+  ll N;
   cin >> N;
-
-  for (int i = 0; i < N; i++) {
-    cin >> tmp;
-    set.insert(tmp);
+  cin.ignore();
+  for (ll i = 1; i <= N; i++) {
+    string s;
+    getline(cin, s);
+    char c = s[s.size() - 1];
+    if (c == 'y')
+      cout << "Case #" << i << ": " << s << " is ruled by nobody.\n";
+    else if (Set.count(c))
+      cout << "Case #" << i << ": " << s << " is ruled by Alice.\n";
+    else
+      cout << "Case #" << i << ": " << s << " is ruled by Bob.\n";
   }
-
-  vector<bool> dp(1001, 0);
-  for (int i = 0; i < s.size(); i++) {
-    tmp = "";
-    for (int j = i; j < s.size(); j++) {
-      tmp += s[j];
-      if (set.count(tmp)) {
-        if (!i)
-          dp[j] = 1;
-        else
-          dp[j] = dp[i - 1] | dp[j];
-      }
-    }
-  }
-
-  if (dp[s.size() - 1])
-    cout << "yes";
-  else
-    cout << "no";
 }
 
 int main() {
