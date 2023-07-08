@@ -12,10 +12,10 @@ void solve() {
 
   for (int i = 0; i < s.size(); i++) digit[s[i] - '0']++;
 
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i < 9; i++) {
     cout << digit[i] << ' ';
   }
-  cout << '\n';
+  cout << digit[9] << '\n';
 }
 
 int main() {
