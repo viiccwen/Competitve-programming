@@ -1,13 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void solve() {
-  int a, b;
-  cin >> a >> b;
-  vector<int> v1(a), v2(b);
-  for (auto &i : v1) cin >> i;
-  for (auto &i : v2) cin >> i;
-}
+#define ll long long
+int N, K;
+ll ans = 0;
+void solve() { cin >> N >> K; }
 
 int main() {
   ios_base::sync_with_stdio(0);
