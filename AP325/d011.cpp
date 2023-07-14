@@ -5,10 +5,13 @@ void solve() {
   cin >> N;
   vector<int> v(N);
   for (auto &i : v) cin >> i;
-  sort(v.begin(), v.end());
-  v.erase(unique(v.begin(), v.end()), v.end());
-  cout << v.size() << '\n';
-  for (auto i : v) cout << i << ' ';
+  vector<int> g = v;
+  sort(g.begin(), g.end());
+  g.erase(unique(g.begin(), g.end()), g.end());
+  map<int, int> mp;
+  int k = 0;
+  for (auto i : g) mp[i] = k++;
+  for (auto i : v) cout << mp[i] << ' ';
 }
 
 int main() {
