@@ -8,7 +8,7 @@
 
 2. [CSES](https://cses.fi/problemset/)
 
-3. [LeetCode](https://leetcode.com/)
+3. [LeetCode](https://leetcode.com/vicwen/)
 
 4. [APCS（ZeroJudge）](https://zerojudge.tw/Problems)
 
