@@ -8,7 +8,7 @@
 
 2. [CSES](https://cses.fi/problemset/)
 
-3. [LeetCode](https://leetcode.com/)
+3. [LeetCode](https://leetcode.com/vicwen/)
 
 4. [APCS（ZeroJudge）](https://zerojudge.tw/Problems)
 
@@ -28,6 +28,7 @@
 
 * Data Structure I - Accomplished
 * LeetCode 75 - Accomplished
+* Daily question - 2023/09 Day 10
 
 ### APCS
 
