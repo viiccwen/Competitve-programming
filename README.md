@@ -28,7 +28,7 @@
 
 * Data Structure I - Accomplished
 * LeetCode 75 - Accomplished
-* Daily question - 2023/09 Day 10
+* Daily question - 2023/09 Day 16
 
 ### APCS
 
