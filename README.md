@@ -29,7 +29,7 @@
 * Data Structure I - Accomplished
 * LeetCode 75 - Accomplished
 * DCC - 2023/09 Accomplished
-* CCC - 2023/10 Day 1
+* DCC - 2023/10 Day 3
 
 ### APCS
 
