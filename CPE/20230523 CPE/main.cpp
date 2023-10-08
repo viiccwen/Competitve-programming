@@ -1,15 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> order;
+vector<int> Next(string &p) {
+  int pLen = p.size();
+  vector<int> next(pLen);
+  int iPart = 0, iWhole = iPart - 1;
 
-int josephus(int n, int k) {
-  int s = 0;
-  for (int i = 2; i <= n; i++) s = (s + k) % i;
-  return s + 1;
+  next[0] = -1;
+  while (iPart < pLen) {
+    if (iWhole == -1 || p[iPart] == p[iWhole]) {
+      iPart++, iWhole++;
+      next[iPart] = iWhole;
+    } else
+      iWhole = next[iWhole];
+  }
+
+  return next;
 }
 
-void solve() { cout << josephus(41, 3); }
+int kmp(string &s, string &p) {
+  int sI = 0, pI = 0;
+  int sLen = s.size(), pLen = p.size();
+  vector<int> next = Next(p);
+
+  for (auto i : next) cout << i << ' ';
+  cout << '\n';
+
+  while (sI < sLen && pI < pLen) {
+    if (pI == -1 || s[sI] == p[pI])
+      sI++, pI++;
+    else
+      pI = next[pI];
+  }
+
+  if (pI >= pLen)
+    return sI - pLen;
+  else
+    return -1;
+}
+
+void solve() {
+  string s = "abcabcabcabe";
+  string t = "abcabe";
+  cout << kmp(s, t);
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
