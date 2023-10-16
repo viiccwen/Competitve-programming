@@ -29,8 +29,8 @@
 * Data Structure I - Accomplished
 * LeetCode 75 - Accomplished
 * DCC - 2023/09 Accomplished
-* DCC - 2023/10 Day 12
-* Dynamic Programming plan - 29/50
+* DCC - 2023/10 Day 16
+* Dynamic Programming plan - 30/50
 
 ### APCS
 
